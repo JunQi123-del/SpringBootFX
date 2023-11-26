@@ -5,14 +5,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import listener.CloseWindowListener;
 
 public class Main extends Application {
+	
+
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/LoginPageDialog.fxml"));
 			
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("LoginPage");
 			primaryStage.show();
@@ -24,4 +29,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 }
