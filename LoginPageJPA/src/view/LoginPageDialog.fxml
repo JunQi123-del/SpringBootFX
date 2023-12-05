@@ -24,12 +24,19 @@
     <Label text="Password:"
         GridPane.columnIndex="0" GridPane.rowIndex="2"/>
  
-    <PasswordField fx:id="password" 
+    <TextField fx:id="password" 
         GridPane.columnIndex="1" GridPane.rowIndex="2"/>
         
         <HBox spacing="10" alignment="bottom_right" 
         GridPane.columnIndex="1" GridPane.rowIndex="4">
         <Button fx:id="button" text="Sign up"/>     
+        
+  		<HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+  		<Label text="Click"/>
+  		<Label fx:id="toSignUp" text="here"/>
+  		<Label text="to sign up"/>
+  		
+  		</HBox>
 </HBox>
 
 </GridPane>

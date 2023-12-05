@@ -18,18 +18,30 @@ import model.LoginModel;
 
 public class LoginPageDialogController {
 	
+	EntityManagerFactory factory = Persistence.createEntityManagerFactory("Login");
+	EntityManager entityManager = factory.createEntityManager();
+	
 	@FXML
 	private TextField id;
 	
 	@FXML
-	private PasswordField password;
+	private TextField password;
 	
 	@FXML
 	private Button button;
 	
 	@FXML
 	private void initialize() {
+		initValue();
 		initButton();
+	}
+	
+	private void initValue() {
+		
+		LoginModel login = entityManager.find(LoginModel.class, "Hellos");
+		id.setText(login.getLoginID());
+		password.setText(login.getPassword());
+		
 	}
 	
 	private void initButton() {
@@ -37,8 +49,6 @@ public class LoginPageDialogController {
 			@Override
 			public void handle(ActionEvent event) {
 				try {
-				EntityManagerFactory factory = Persistence.createEntityManagerFactory("Login");
-				EntityManager entityManager = factory.createEntityManager();
 			
 				LoginModel login = new LoginModel();
 				login.setLoginID(id.getText());

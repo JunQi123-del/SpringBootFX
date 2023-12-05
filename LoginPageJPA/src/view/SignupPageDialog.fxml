@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <GridPane fx:controller="controller.LoginPageDialogController" 
   xmlns="http://javafx.com/javafx/8.0.171"  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
 
-<Label text="Welcome" 
+<Label text="Please Enter your Details Below" 
         GridPane.columnIndex="0" GridPane.rowIndex="0"
         GridPane.columnSpan="2"/>
  
@@ -27,16 +26,33 @@
     <TextField fx:id="password" 
         GridPane.columnIndex="1" GridPane.rowIndex="2"/>
         
+    <Label text="Email Address"
+    	GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    	
+    <TextField fx:id="email"
+    	GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    	
+    <Label text="FirstName"
+    	GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    	
+    <TextField fx:id="firstName"
+    	GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    	
+    <Label text="LastName"
+    	GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    	
+    <TextField fx:id="lastName"
+    	GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    	
+    <Label text="Date Of Birth"
+    	GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    
+    <DatePicker fx:id="dobPicker"
+    	GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    
         <HBox spacing="10" alignment="bottom_right" 
         GridPane.columnIndex="1" GridPane.rowIndex="4">
         <Button fx:id="button" text="Sign up"/>     
-        
-  		<HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
-  		<Label text="Click"/>
-  		<Label fx:id="toSignUp" text="here"/>
-  		<Label text="to sign up"/>
-  		
-  		</HBox>
 </HBox>
 
 </GridPane>
