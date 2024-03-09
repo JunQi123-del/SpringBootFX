@@ -24,19 +24,19 @@ public class LoginModel implements Serializable {
 	@Column(name="email")
 	private String emailAddress;
 	
-	@Column(name="first_name")
-	private String firstName;
+//	@Column(name="first_name")
+//	private String firstName;
+//	
+//	@Column(name="last_name")
+//	private String LastName;
+//	
+//	@Column(name="date_of_birth")
+//	@Temporal(TemporalType.DATE)
+//	private Calendar DOB;
 	
-	@Column(name="last_name")
-	private String LastName;
-	
-	@Column(name="date_of_birth")
-	@Temporal(TemporalType.DATE)
-	private Calendar DOB;
-	
-	public String getLoginID() {
-		return loginID;
-	}
+//	public String getLoginID() {
+//		return loginID;
+//	}
 	
 	public String getEmailAddress() {
 		return emailAddress;
@@ -46,31 +46,31 @@ public class LoginModel implements Serializable {
 		this.emailAddress = emailAddress;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public String getLastName() {
-		return LastName;
-	}
-	
-	public void setLastName(String lastName) {
-		LastName = lastName;
-	}
-
-	public Calendar getDOB() {
-		return DOB;
-	}
-
-
-
-	public void setDOB(Calendar dOB) {
-		DOB = dOB;
-	}
+//	public String getFirstName() {
+//		return firstName;
+//	}
+//
+//	public void setFirstName(String firstName) {
+//		this.firstName = firstName;
+//	}
+//	
+//	public String getLastName() {
+//		return LastName;
+//	}
+//	
+//	public void setLastName(String lastName) {
+//		LastName = lastName;
+//	}
+//
+//	public Calendar getDOB() {
+//		return DOB;
+//	}
+//
+//
+//
+//	public void setDOB(Calendar dOB) {
+//		DOB = dOB;
+//	}
 
 
 

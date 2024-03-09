@@ -7,12 +7,17 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.LoginModel;
 
@@ -31,16 +36,47 @@ public class LoginPageDialogController {
 	private Button button;
 	
 	@FXML
+	private Label toSignUp;
+	
+	@FXML
 	private void initialize() {
 		initValue();
 		initButton();
+		initListener();
+	}
+	
+	private void initListener() {
+//		button.addEventHandler(MouseEvent.MOUSE_CLICKED, null);
+		id.textProperty().addListener(textChangeListener());
+	}
+	
+	private ChangeListener<String> textChangeListener(){
+		return new ChangeListener<String>(){
+			@Override
+			public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
+				// TODO Auto-generated method stub
+				System.out.println("The string size is: "+newValue.length());
+			}
+		};
+	}
+	
+	private EventHandler<ActionEvent> mouseClickEventHandler(){
+		return new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		};
 	}
 	
 	private void initValue() {
 		
 		LoginModel login = entityManager.find(LoginModel.class, "Hellos");
-		id.setText(login.getLoginID());
-		password.setText(login.getPassword());
+//		id.setText(login.getLoginID());
+//		password.setText(login.getPassword());
 		
 	}
 	
