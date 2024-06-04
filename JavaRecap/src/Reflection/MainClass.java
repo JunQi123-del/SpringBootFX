@@ -31,7 +31,7 @@ public class MainClass {
 		Method[] myPetMethods = myPet.getClass().getDeclaredMethods();
 		for(Method catMeth:myPetMethods) {
 //			System.out.println(catMeth.getName());
-			if(catMeth.getName().equals("heyThisIsPrivate")) {
+			if(catMeth.getName().equals("heyThisIsPrivate")) { 
 				try {
 					catMeth.setAccessible(true);
 					catMeth.invoke(myPet);
